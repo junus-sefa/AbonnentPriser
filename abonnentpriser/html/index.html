@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.101.0">
+    <title>AbonnentPriser</title>
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/other.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+</head>
+<body>   
+<header>
+  <div class="navbar navbar-dark bg-dark shadow-sm fixed-top">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <img style="margin-right:10px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAFi0lEQVRoge2XXWwUVRTH//fO7uxH98vdbbttWUqBopIKhSJCQUJiMIaIIRE1LUoEo2KCRjTBB5XURx+MLyYGA2JEi4J9aKLxkQf0QSxIMAYiPliLpdv9mu3s98y914eyze52t3TapqDu72XnnD3nnvPfOzP3LFCjRo0aNf7PkGJj/8jpHwF0F/uuDP++qA0VWNO6qtRB8MPJJT0Pl8fRMru7POCuQWBrJXe5gH8dpnklSxL8Lg9cVgdkkwwAyOl5qJkUImocOmML0uSMPcw10V3nRNDbCEpLN9EmW2CTLfA7PRiJhpBIq/NucibmdAu565xo9TdNa75kYUrRWt8Et9055+Zmg2EBJklC0Ns46/igvxEmSTJapiK9Vz7e+/xo/33FPsMC/C7PjL98OZRQ+Jweo2UqI6QvCCNXD9w4fXBqfaNrOK0Ow3VdNuM5MyEAW+HasADZZDZc0DKHnJkghP5auDYsgNw+ZIGSqkNzbO4C8rpmuGBOM54zA5Hjy3tDBcOwgIlMynDFiUzScE4lxOTHlWKfYQERNQ7O+azjmeCIqorRMpURAkLT7QeunWguuAwL0BnDSDR0+8Bb3IiEKo4UAY8fHcF2BDz+inY1WFbfxCyWv/aPfPU+MMeTOJFWMRy+CS6q7wQTHMPhm1VHCZ/TA0oJ/LfOiHK7GoIzEEIkENENzGMWSqRVpP5Ow+f0wGWtg2yeHObyWh4T2RSiqjLjMBdVFficHkST8Yp2RQgB5xyEEkCQr+clAJi8nUJKFCFEDeeOKRGMKZGqdjWoJAGE6JLGzwLzFLDYECFATBIgyPfHl/eEgLJngC/GAD9HeF6DIAA1UQiKUwV/yQ60LftDvno5sEsw8YpklrYnojFLcngU+VwOzMCrczZ0dDwAt8sFALh4cQgrVrbD43aDM4YLP19AiNngdrsngwmBZJZACAGRpERK0G8rCugjfRzAIIDBXUPH7LF45Eg2NH5ICUd9do8bjgYf5Do7iGyGLjjyWh5CiDkJGFXCsHodiMfj0GQCi6cOVq8LTNchuWzwBgMwm0tnqJySAgHOng0+nSn4ZjWlbBp4fb0am3hPicUeSSmKTXABMAFCJDj9XjjqvZAddRBmimwuD03LGxYkyzIaGhqRSMSRz+WxuXtLaYAAsooKi8e57bOlPecNCShmXf+hJzOp5Fvx8UhXLpOmEGLyjBcCggmAc5gtNrjqfbB4nDDZrOCUIKflwWb5iHnv8WLN2rUlPq4xaKnsSH/HC60gZGrbDb+Ffun9aADAQNexl8zcRl9Tk+rBeGh8JWMMRAIACTp0xMJjwPgYwDkEB8A4bE4nnIF6OHxeyA47UukU0pnMtNuwzjH9/wPTdVBZOlXcPLBAg+6azw82CIijyZjyjBIN+6s+Frd2K9i+Ep3dW8B1Hb/9NAQdHI1ty5DKJJFMp9GyJIjmluaSVC2ZBZGk1adW7bu64AKK2fjN4Q1JVT2aCEd3pCYS1koxlFKs6uwENVFcu3QZ67dtQ0vbMoBznB/8Dv5AE1Z0rAYIAaUUhBJwxi73d7y4rnytBT/ILuz5cAjAEwCw7vSrezJJ9UgsFO7KZzNTZw7nHNcuXZrKGbl+HYHWINRYHBPJBDau3wGr3Q7BBYQQEIzBbDGfqFRvwXegEtvP9ZkmxmNvJOPxl6OhUBvT9Kp161tasPXxneVuzSyJ5k+ae6fNGosioJjNZw5701ruHTUW742PhxtF2UTbtX07lt7bXp42eDLYs7vSeosuoJiHzrzZlc4k31bC4cdURbFJJhN2PrcXJlkuiSMQez4N9g5UWuOOCiim88tDT1ltln33P7hhA4BA0VeJJKSm4tO3mLtGQIE+cc70543RRwnoswB2g+CDk0t63r3TfdWoUaPGf5R/AHAKIx7F/3vKAAAAAElFTkSuQmCC">        <strong>AbonnentPriser</strong>
+      </a>
+      <form class="d-flex" role="search">
+        <input id="search" class="form-control me-2" type="search" placeholder="Søk..." aria-label="Search">
+      </form>
+      <h5 class="totalSumCon">Din samlede sum <span class="totalSumPrice">kr <span id="SUM">0</span>,-</span></h5>
+      
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <div class="abonnentPriser py-5">
+    <div class="container">      
+      <button id="resetKnapp" class="btn" title="reset"><i class="bi bi-arrow-clockwise"></i> Start på nytt</button>
+
+
+      <div id="leverandorer" class="row row-cols-2 row-cols-sm-3 row-cols-md-3 g-3">
+        <!-- Netflix | Start -->
+        <div class="prisBoks col streaming netflix">
+          <div class="card shadow-md">
+            <button class="btn btn-primary merInfoKnapp collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#netflix-kollaps" aria-expanded="false" aria-controls="netflix-kollaps">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../img/netflix-logo.jpg">
+            </button>             
+            <div class="collapse" id="netflix-kollaps">
+            <div class="card-body">
+              <h5 class="card-title">Netflix</h5>
+                  <div class="d-flex justify-content-between align-items-center">
+                  <table class="table table-borderless">
+                    <tbody>
+                      <tr class="netflix1">
+                        <td>Basis</td>
+                        <td><h5>kr <span id="netflix1_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                        <td><button id="netflix1" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                      </tr>
+                      <tr class="netflix2">
+                        <td>Standard</td>
+                        <td><h5>kr <span id="netflix2_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                        <td><button id="netflix2" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                      </tr>
+                      <tr class="netflix3">
+                        <td>Premium</td>
+                        <td><h5>kr <span id="netflix3_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                        <td><button id="netflix3" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <!-- Netflix | slutt -->
+
+        <!-- Disney Plus | Start -->
+        <div class="prisBoks col streaming">
+          <div class="card">
+            <button class="btn btn-primary merInfoKnapp collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#disneyplus-kollaps" aria-expanded="false" aria-controls="disneyplus-kollaps">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../img/disneyplus-logo.jpg">
+          </button>             
+          <div class="collapse" id="disneyplus-kollaps">
+            <div class="card-body">
+              <h5 class="card-title">Disney+</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr class="disneyPlus1">
+                      <td>Månedsabonnement</td>
+                      <td><h5>kr <span id="disneyPlus1_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="disneyPlus1" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="disneyPlus2">
+                      <td>Årsabonnement</td>
+                      <td><h5>kr <span id="disneyPlus2_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="disneyPlus2" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <!-- Disney Plus | Slutt -->
+
+        <!-- HBO Nordic | Start -->
+        <div class="prisBoks col streaming">
+          <div class="card">
+            <button class="btn btn-primary merInfoKnapp collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#hboNordic-kollaps" aria-expanded="false" aria-controls="hboNordic-kollaps">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../img/hboNordic-logo.jpg">
+          </button>   
+          <div class="collapse" id="hboNordic-kollaps">          
+            <div class="card-body">
+              <h5 class="card-title">HBO Nordic</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr class="hboNordic">
+                      <td>Standard</td>
+                      <td><h5>kr <span id="hboNordic_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="hboNordic" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <!-- HBO Nordic | Slutt -->
+
+        <!-- Viaplay | Start -->
+        <div class="prisBoks col streaming">
+          <div class="card">
+            <button class="btn btn-primary merInfoKnapp collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#viaPlay-kollaps" aria-expanded="false" aria-controls="viaPlay-kollaps">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../img/viaplay-logo.jpg">
+          </button>   
+          <div class="collapse" id="viaPlay-kollaps">          
+            <div class="card-body">
+              <h5 class="card-title">ViaPlay</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr class="viaPlay1">
+                      <td>Viaplay Nyheter</td>
+                      <td><h5>kr <span id="viaPlay1_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="viaPlay1" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="viaPlay2">
+                      <td>Viaplay Film & Serier</td>
+                      <td><h5>kr <span id="viaPlay2_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="viaPlay2" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="viaPlay3">
+                      <td>Viaplay Total</td>
+                      <td><h5>kr <span id="viaPlay3_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="viaPlay3" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <!-- Viaplay | Slutt -->
+
+        <!-- Discovery+ | Start -->
+        <div class="prisBoks col streaming">
+          <div class="card">
+            <button class="btn btn-primary merInfoKnapp collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#discovery-kollaps" aria-expanded="false" aria-controls="discovery-kollaps">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../img/discovery-logo.jpg">
+          </button>   
+          <div class="collapse" id="discovery-kollaps">          
+            <div class="card-body">
+              <h5 class="card-title">Discovery+</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr class="discoveryPlus1">
+                      <td>Underholdning (med reklame)</td>
+                      <td><h5>kr <span id="discoveryPlus1_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="discoveryPlus1" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="discoveryPlus2">
+                      <td>Underholdning</td>
+                      <td><h5>kr <span id="discoveryPlus2_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="discoveryPlus2" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="discoveryPlus3">
+                      <td>Live</td>
+                      <td><h5>kr <span id="discoveryPlus3_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="discoveryPlus3" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="discoveryPlus4">
+                      <td>Sport</td>
+                      <td><h5>kr <span id="discoveryPlus4_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="discoveryPlus4" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <!-- Discovery+ | Slutt -->
+
+
+        <!-- TV2 Play+ | Start -->
+        <div class="prisBoks col streaming">
+          <div class="card">
+            <button class="btn btn-primary merInfoKnapp collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#tv2play-kollaps" aria-expanded="false" aria-controls="tv2play-kollaps">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../img/tv2Play-logo.jpg">
+          </button>   
+          <div class="collapse" id="tv2play-kollaps">          
+            <div class="card-body">
+              <h5 class="card-title">TV2 Play</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr class="tv2Play1">
+                      <td>Nyheter (med reklame)</td>
+                      <td><h5>kr <span id="tv2Play1_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="tv2Play1" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="tv2Play2">
+                      <td>Nyheter</td>
+                      <td><h5>kr <span id="tv2Play2_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="tv2Play2" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="tv2Play3">
+                      <td>Basis (Med reklame)</td>
+                      <td><h5>kr <span id="tv2Play3_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="tv2Play3" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="tv2Play4">
+                      <td>Film og serier</td>
+                      <td><h5>kr <span id="tv2Play4_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="tv2Play4" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="tv2Play5">
+                      <td>Familie</td>
+                      <td><h5>kr <span id="tv2Play5_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="tv2Play5" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="tv2Play6">
+                      <td>Familie og sport</td>
+                      <td><h5>kr <span id="tv2Play6_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="tv2Play6" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="tv2Play7">
+                      <td>Total</td>
+                      <td><h5>kr <span id="tv2Play7_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="tv2Play7" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        <!-- TV2 Play+ | Slutt -->
+
+        <!-- Strim | Start -->
+        <div class="prisBoks col streaming">
+          <div class="card">
+            <button class="btn btn-primary merInfoKnapp collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#strim-kollaps" aria-expanded="false" aria-controls="strim-kollaps">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../img/strim-logo.jpeg">
+          </button>   
+          <div class="collapse" id="strim-kollaps">          
+            <div class="card-body">
+              <h5 class="card-title">Strim</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr class="strim1">
+                      <td>Strim litt</td>
+                      <td><h5>kr <span id="strim1_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="strim1" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="strim2">
+                      <td>Strim mye</td>
+                      <td><h5>kr <span id="strim2_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="strim2" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="strim3">
+                      <td>Strim mest</td>
+                      <td><h5>kr <span id="strim3_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="strim3" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="strim4">
+                      <td>Sport Basis</td>
+                      <td><h5>kr <span id="strim4_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="strim4" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="strim5">
+                      <td>Sport Premium</td>
+                      <td><h5>kr <span id="strim5_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="strim5" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Strim | Slutt -->
+
+
+
+        <!-- VG+ | Start -->
+        <div class="prisBoks col nyheter">
+          <div class="card">
+            <button class="btn btn-primary merInfoKnapp collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vg-kollaps" aria-expanded="false" aria-controls="vg-kollaps">
+            <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="../img/vg-logo.png">
+          </button>   
+          <div class="collapse" id="vg-kollaps">          
+            <div class="card-body">
+              <h5 class="card-title">VG+</h5>
+              <div class="d-flex justify-content-between align-items-center">
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr class="vg1">
+                      <td>VG+</td>
+                      <td><h5>kr <span id="vg1_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="vg1" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="vg2">
+                      <td>VG+ Sport</td>
+                      <td><h5>kr <span id="vg2_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="vg2" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="vg3">
+                      <td>VG+ med Dine Penger</td>
+                      <td><h5>kr <span id="vg3_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="vg3" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="vg4">
+                      <td>VG+ med PodMe</td>
+                      <td><h5>kr <span id="vg4_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="vg4" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="vg5">
+                      <td>VG+ Total</td>
+                      <td><h5>kr <span id="vg5_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="vg5" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                    <tr class="vg6">
+                      <td>Full tilgang</td>
+                      <td><h5>kr <span id="vg6_pris" class="pris"></span><small class="text-muted fw-light">,- /mnd</small></h5></td>
+                      <td><button id="vg6" type="button" class="sammenlignKnapp btn btn-sm btn-outline-secondary">Legg til</button></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- VG+ | Slutt -->
+
+      </div>
+    </div>
+  </div>
+
+</main>
+
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>

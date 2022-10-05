@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+html {
+    height: 100%;
+  }
+  body {
+    max-height: 100vh;
+  }
+html,body{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+select{
+    width:100%;
+    padding:15px;
+    -webkit-appearance:none;
+    font-size: 14px;
+    border: 0;
+    box-shadow:  0px 0px 30px -15px #ccc;
+}
+
+
+input{
+    padding:10px 0px 10px 0;
+    background-color: transparent;
+    border:none;
+    color:rgba(0, 0, 0, 0.9) ;
+    font-size: 30px;
+    max-width: 120px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    text-align: right;
+}
+
+
+
+select:focus, input:focus{
+    outline:none;
+}
+
+ul {
+    list-style: decimal;
+    padding-left:30px;
+}
+
+ul li{
+    line-height: 2.3rem;
+}
+
+ul li.nice{
+    text-decoration: line-through;
+    color:#fff;
+    font-weight: normal;
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: 600;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+table{
+    width:100%;
+    text-align: left;
+}
+td{
+    padding:0;
+}
+tr td{
+    padding: 10px 0;
+}
+tr td:last-child {
+    text-align: right;
+    width: 25%;
+}
+
+hr{
+    opacity: .15;
+    height:2px;
+    border:0;
+    background: black;
+    max-width: 20%;
+    margin-left:0;
+}
+
+.wrap {
+    width: 100%;
+}
+
+.fleft {
+    padding:50px 75px;
+    float:left; 
+    width: 40%;
+background:#F2F2F2;
+color:#000;
+}
+.fright {
+    background-image: url('../img/bakgrunn.jpg');
+    transition: background-image 0.6s ease-in-out;
+    box-shadow: inset 0 0 0 1000px rgba(0, 64, 208, 0.9);
+    padding:50px 150px;
+float: right;
+    width: 60%;
+    color:#fff;
+}
+
+.box{
+    min-height: 100vh;
+}
+
+.inputTittel{
+    border-left: 2px solid rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
+}
+
+
+
+ .flex {
+	display: flex;
+	width: 960px;
+	max-width: 100%;
+	margin: auto;
+}
+
+.flex .col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	flex: 1 1 300px;
+}
+.flex .col.rightAlign{
+    align-items: flex-end;
+}
+
+.flex .col .btn {
+	align-self: flex-start;
+	margin-top: auto;
+}
+
+.btn .btn-run{
+    border:0;
+    margin:0;
+    width:100%;
+    padding:25px 0;
+    margin-top:20px;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color:#fff;
+    background-color: #1A1B16;
+    transition: 0.15s;
+}
+
+.btn .btn-run:hover{
+    cursor:pointer;
+    background-color: rgb(88, 88, 88);
+    color:#fff;
+}
+
+/**
+ * Under 900px wrap cols
+ */
+@media (max-width: 900px) {
+	.flex {
+		flex-wrap: wrap;
+	}
+}
+
+.bold{
+    font-weight: 700;
+}
+
+/** Checkbox Animation **/
+*{ box-sizing: border-box; user-select: none; }
+a{text-decoration: none;}
+
+input[type='checkbox']{ display: none;}
+
+input[type='checkbox'] + label{
+  position: relative;
+  display: flex;
+  margin: .6em 0;
+  align-items: center;
+  color: #000;
+  transition: color 250ms cubic-bezier(.4,.0,.23,1);
+}
+input[type='checkbox'] + label > ins{
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 1.5em;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  transition: height 300ms cubic-bezier(.4,.0,.23,1);
+}
+input[type='checkbox'] + label > ins > i{
+  position: absolute;
+  bottom: 0;
+  font-style: normal;
+  color: #0040D0;
+}
+input[type='checkbox'] + label > span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5em;
+  width: 1em;
+  height: 1em;
+  background: transparent;
+  border: 2px solid #000;
+  border-radius: 2px;
+  cursor: pointer;  
+  transition: all 250ms cubic-bezier(.4,.0,.23,1);
+}
+
+input[type='checkbox'] + label:hover, input[type='checkbox']:focus + label{
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type='checkbox'] + label:hover, input[type='checkbox']:focus{
+  color: #000;
+}
+input[type='checkbox'] + label:hover > span, input[type='checkbox']:focus + label > span{
+  background: rgba(255,255,255,.1);
+}
+input[type='checkbox']:checked + label > ins{ height: 100%; }
+
+input[type='checkbox']:checked + label > span{
+  border: .5em solid #0040D0;
+  animation: shrink-bounce 200ms cubic-bezier(.4,.0,.23,1);
+}
+input[type='checkbox']:checked + label > span:before{
+  content: "";
+  position: absolute;
+  top: .6em;
+  left: .2em;
+  border-right: 3px solid transparent;
+  border-bottom: 3px solid transparent;
+  transform: rotate(45deg);
+  transform-origin: 0% 100%;
+  animation: checkbox-check 125ms 250ms cubic-bezier(.4,.0,.23,1) forwards;
+}
+
+@keyframes shrink-bounce{
+  0%{
+    transform: scale(1);
+  }
+  33%{    
+    transform: scale(.85);
+  }
+  100%{
+    transform: scale(1);    
+  }
+}
+@keyframes checkbox-check{
+  0%{
+    width: 0;
+    height: 0;
+    border-color: #fff;
+    transform: translate3d(0,0,0) rotate(45deg);
+  }
+  33%{
+    width: .2em;
+    height: 0;
+    transform: translate3d(0,0,0) rotate(45deg);
+  }
+  100%{    
+    width: .2em;
+    height: .5em;    
+    border-color: #fff;
+    transform: translate3d(0,-.5em,0) rotate(45deg);
+  }
+}
+
+/** Input Group **/
+.input-group {
+    display: flex;
+}
+
+.input-group > input {
+    flex: 1 0 auto;
+}
+  
+.input-group-addon {
+    padding: 10px 0em;
+    align-self: flex-end;
+    opacity: .4;
+}
+
+/** Collapsible */
+.accordionDIV{
+    margin-bottom: 15px;
+}
+
+button.accordion {
+    margin-top:0!important;
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    margin-bottom: 0;
+    border-radius: 0;
+  }
+  
+  
+  button.active, button.accordion:hover {
+    background-color: #fff;
+    color:#0040D0;
+    border-bottom: 0;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: #fff;
+    color:#000;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+
+.beskrivelsesTagg{
+    background-color: #1A1B16;
+    color:yellow;
+    padding:5px 25px;
+    display: inline;
+    font-size: 13px;
+    font-weight: bold;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    display: none;
+}
+
+
+.beskrivelsesTagg.omvendt{
+  color:red;
+
+}
+
+button.accordion:after {
+    content: '\02795'; /* Unicode character for "plus" sign (+) */
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  button.active:after {
+    content: "\2796"; /* Unicode character for "minus" sign (-) */
+  }
+
+
+#svalbardBOKS{
+    padding-left: 1px;
+}
+
+.fyllInn{
+    color:yellow;
+    font-weight: bold;
+}
+
+#svalbardBOKS, #vektBOKS, #dimensjonerBOKS, #alternativBOKS, #beregnKnapp{
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+.smallLogoFirma{
+  max-height: 12px;
+  padding-left: 10px;
+  float:right;
+}
+
+.forsikringsTekstSpan{
+  display: block;
+  font-size: small;
+  text-transform: inherit;
+  font-weight: bolder;
+}
+
+.sendingsBeskrivelse{
+  margin:0;
+  margin-top:10px;
+  margin-bottom: 30px;
+}
+
+
+.btn-link{
+  margin:0;
+  border:0;
+  padding:10px;
+  font-size: smaller;
+  letter-spacing:.5px;
+  color:#fff;
+  background-color: #0040D0;
+  transition: 0.15s;
+}
+
+.btn-link:hover{
+  cursor:pointer;
+  background-color: #1A1B16;
+  color:#fff;
+}
+
+.smallTextOpacity{
+  font-size: small;
+  opacity: .5;
+  text-decoration: inherit;
+}
+
+.leveringstid{
+  font-size: smaller;
+}
+.leveringstid td{
+  padding-bottom: 0;
+}
+.portoTR td{
+  padding-top: 0;
+}
+
+
+/** Popup Dialog */
+/* Popup container */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+  visibility: hidden;
+  width: 160px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn .5s;
+  animation: fadeIn .5s
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
